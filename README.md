@@ -95,3 +95,7 @@ launcher/
 2. 扫码登录与令牌存储（Windows Credential Manager / DPAPI）
 3. 分片下载、SHA-256 校验与增量更新
 4. 自动更新签名与灰度发布
+
+## 许可证
+
+MIT License，详见 [LICENSE](LICENSE)。
