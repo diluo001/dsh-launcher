@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080b11" />
+    <title>DSH Launcher</title>
+    <script>
+      try {
+        var savedTheme = localStorage.getItem("dsh-theme");
+        if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+        var savedSettings = JSON.parse(localStorage.getItem("dsh-settings") || "{}");
+        if (savedSettings.reduceMotion) {
+          document.documentElement.dataset.reduceMotion = "true";
+        }
+        if (savedSettings.density) {
+          document.documentElement.dataset.density = savedSettings.density;
+        }
+      } catch (error) {
+        // ignore storage failures
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies and frontend build output
+node_modules
+dist
+dist-ssr
+*.local
+
+# Rust / Tauri build output
+src-tauri/target
+src-tauri/gen/schemas
+
+# Local release binaries and WebView2 profile (contains cookies / session data)
+release
+.webview2
+**/.webview2
+
+# Local cargo mirror config (rsproxy), not part of the project
+.cargo
+
+# Local test / capture artifacts
+.edge-*
+.tmp-*
+*.err
+*.out
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
